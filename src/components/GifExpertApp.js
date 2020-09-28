@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { AddCategory } from './AddCategory'
 
 const GifExpertApp = (props) => {
   // const categories = ['Dragon ball', 'One Piece', 'Ranma']
@@ -16,9 +17,8 @@ const GifExpertApp = (props) => {
     <>
       <h2>GifExpertApp</h2>
       <hr></hr>
-      <button onClick={() => handleAdd('Dragon ball super')}>
-        Agregar categoria
-      </button>
+      <AddCategory setcategories={handleAdd}></AddCategory>
+
       <ul>
         {categories.map((categorie, index) => {
           return <li key={index}>{categorie}</li>
